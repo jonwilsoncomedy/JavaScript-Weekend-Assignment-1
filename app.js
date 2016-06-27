@@ -13,6 +13,7 @@ var initialList = [claim1, claim2, claim3, claim4, claim5]
 var totalPayedOut = 0;
 var percent = 0;
 var coveredAmount = 0;
+var paidOutMesg = '';
 
 function Claim(name, type, cost){
 	this.patientName = name;
@@ -91,7 +92,14 @@ function percentCovered(claim) {
 // console out a message in the format ('Paid out $______ for _______') where the second statement is the patient name.
 function determineCoveredAmount(claim) {
 	coveredAmount = Math.round(initialList[i].visitCost * (percent/100));
-	console.log('Paid out $' + coveredAmount + ' for ' + initialList[i].patientName);
+	var name = initialList[i].patientName;
+	var covered = coveredAmount;
+	paidOutMesg = 'Paid out $' + covered + ' for ' + name;
+	console.log(paidOutMesg);
+		$(function() {
+			paidOutMesg = $("<p>Paid out $" + covered + "  for " + name + "</p>");
+			$('h1').after(paidOutMesg);
+		});
 }
 
 // 6 One for loop to rule them all
