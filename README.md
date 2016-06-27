@@ -1,26 +1,9 @@
-# Prime Weekend Challenge 1
+#Insurance Payouts
 
-##Hey Primers!
+This application processes insurance claims. It adds to an array of five items using a constructor function.
 
-For this weekend, you will be creating an application that will process insurance claims. You will be provided an array of 5 items, where you will use the constructor function to create 5 more, combining to the two to have one array of 10 items.  
+It runs a for loop to iterate over an array of objects, using a first function to determine the percentage of coverage for a given person's medical visit. Then it uses a second function to apply that percentage to each patient's visit cost. It logs each patient's total payout to the console. Then it logs the total amount paid to all patients.
 
-You will need to create two functions, one will determine what percentage (per rules below) will be covered and another will determine what that amount will be (per the visitCost value). Within your cost determining method, console out a message in the format ('Paid out $______ for _______') where the second statement is the patient name.
+In addition, inside of the second function, it also creates a JQuery object, which contains a <p> tag, with the amount paid to each patient in it. It appends this object to the console, for each patient.
 
-After that is complete, console out the entire amount paid out.
-
-Numbers should be rounded to the nearest whole number!
-
-###Rules
-Optical - covers 0%
-
-Specialist - covers 10%
-
-Emergency - covers 100%
-
-Primary Care - covers 50%
-
-##Hard Mode
-Append to the DOM!
-
-##Pro Mode
-Style appended content with CSS!
+And finally, the html calls a CSS stylesheet which has one simple rule to underline all text inside <p> elements.
